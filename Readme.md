@@ -88,21 +88,23 @@ _For more examples, please refer to the [Documentation](https://www.terraform.io
 
 ## Usage
 
-Get ELK information to access via browser:
+1. Get ELK information to access via browser:<br/>
 ``$aws ec2 describe-instances --filters "Name=tag:Name,Values=dev-elk" --query "Reservations[*].Instances[*].PublicIpAddress"``
 
-
-If you use MAC OS:
+(Maybe) If you use MAC OS:<br/>
 ``open http://$( aws ec2 describe-instances --filters "Name=tag:Name,Values=dev-elk" --query "Reservations[*].Instances[*].PublicIpAddress" | grep '"' | tr -s " " | cut -d '"' -f2):5601``
 
 
-## Configure Kibana
-Exist a PDF file at this repo, to help you to configure Kibana [PDF](https://github.com/tonnytg/terraform-elk-ec2-aws/blob/master/Kibana-Configure-Context.pdf)_
-
-
-
-Get EC2 Client IP to use at Kibana Filter
+2. Get EC2 Client IP to use at Kibana Filter<br/>
 ``$aws ec2 describe-instances --filters "Name=tag:Name,Values=dev-ec2-asg" --query "Reservations[*].Instances[*].PrivateIpAddress"``
+
+
+
+## Configure Kibana
+Exist a PDF file at this repo, to help you to configure Kibana<br/>
+[>>Access PDF File here <<!](https://github.com/tonnytg/terraform-elk-ec2-aws/blob/master/Kibana-Configure-Context.pdf)_
+
+
 
 
 
@@ -115,11 +117,10 @@ Contributions are what make the open source community such an amazing place to b
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+5. Open a Pull Request<br/><br/>
 
 <!-- CONTACT -->
 ## Contact
 
-Antonio Thomacelli Gomes - [@tonnytg](https://twitter.com/tonnytg) - tonnytg@gmail.com
-
+Antonio Thomacelli Gomes - [@tonnytg](https://twitter.com/tonnytg) - tonnytg@gmail.com<br/>
 Project Link: [https://github.com/tonnytg](https://github.com/tonnytg)
