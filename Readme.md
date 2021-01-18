@@ -1,26 +1,25 @@
-#<!-- TABLE OF CONTENTS -->
+<!-- TABLE OF CONTENTS -->
 <details open="open">
   <summary>Deploy ELK with Packer and Terraform</summary>
   <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
-        <li><a href="#packer">Build Packer</a></li>
-        <li><a href="#terraform">Build Terraform</a></li>
+        <ul>
+            <li><a href="#packer">Build Packer</a></li>
+            <li><a href="#terraform">Build Terraform</a></li>
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#contributing">Contributing</a></li>
   </ol>
 </details>
+
+## About the project
+> This terraformation can help your company to build an ELK very fast on AWS with EC2 
+> This project creates an EC2 demo to simulate a client.
 
 
 ## Prerequisites
