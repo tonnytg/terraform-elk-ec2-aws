@@ -1,0 +1,47 @@
+{
+    "variables": {
+    "vpc_region": "${vpc_region}",
+    "instance_type": "${elk_instance_type}"
+  },
+    "builders": [
+      {
+        "type": "amazon-ebs",
+        "region": "{{user `vpc_region`}}",
+        "source_ami_filter": {
+            "filters": {
+              "virtualization-type": "hvm",
+              "name": "ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*",
+              "root-device-type": "ebs"
+            },
+            "owners": ["099720109477"],
+            "most_recent": true
+          },
+        "instance_type": "{{user `instance_type`}}",
+        "ssh_username": "ubuntu",
+        "ami_name": "elk-base-ami-{{isotime \"2006-01-02-1504\"}}",
+        "ami_groups": "all",
+        "launch_block_device_mappings": [
+          {
+            "device_name": "/dev/sda1",
+            "volume_type": "gp2",
+            "volume_size": "10",
+            "delete_on_termination": true
+          }
+        ]
+      }
+    ],
+    "provisioners": [
+      {
+        "type": "shell",
+        "script": "base_elk_script.sh"
+      }
+    ],
+    "post-processors": [
+      {
+        "type": "manifest",
+        "output": "manifest.json",
+        "strip_path": true
+      }
+    ]
+  }
+  
