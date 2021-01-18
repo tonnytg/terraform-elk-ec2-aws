@@ -89,14 +89,23 @@ _For more examples, please refer to the [Documentation](https://www.terraform.io
 ## Usage
 
 1. Get ELK information to access via browser:<br/>
-``$aws ec2 describe-instances --filters "Name=tag:Name,Values=dev-elk" --query "Reservations[*].Instances[*].PublicIpAddress"``
+```
+  $aws ec2 describe-instances --filters "Name=tag:Name,Values=dev-elk" \
+  --query "Reservations[*].Instances[*].PublicIpAddress"
+```
 
 (Maybe) If you use MAC OS:<br/>
-``open http://$( aws ec2 describe-instances --filters "Name=tag:Name,Values=dev-elk" --query "Reservations[*].Instances[*].PublicIpAddress" | grep '"' | tr -s " " | cut -d '"' -f2):5601``
+```
+ $open http://$( aws ec2 describe-instances --filters "Name=tag:Name,Values=dev-elk" \
+  --query "Reservations[*].Instances[*].PublicIpAddress" | grep '"' | tr -s " " | cut -d '"' -f2):5601
+ ```
 
 
 2. Get EC2 Client IP to use at Kibana Filter<br/>
-``$aws ec2 describe-instances --filters "Name=tag:Name,Values=dev-ec2-asg" --query "Reservations[*].Instances[*].PrivateIpAddress"``
+```
+ $aws ec2 describe-instances --filters "Name=tag:Name,Values=dev-ec2-asg" \ 
+ --query "Reservations[*].Instances[*].PrivateIpAddress"
+```
 
 
 
