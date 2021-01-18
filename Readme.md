@@ -27,13 +27,13 @@
 
 
 ## Prerequisites
-1. Será necessário ter o AWS Cli instalado e configurado
+1. Será necessário ter o AWS Cli instalado e configurado<br/>
 _For more examples, please refer to the [Documentation](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html)_
 
-2. Será necessário ter o Packer instalado
+2. Será necessário ter o Packer instalado<br/>
 _For more examples, please refer to the [Documentation](https://www.packer.io/downloads)_
 
-3. Será necessário ter o terraform instalado
+3. Será necessário ter o terraform instalado<br/>
 _For more examples, please refer to the [Documentation](https://www.terraform.io/downloads.html)_
 
 
@@ -97,7 +97,7 @@ If you use MAC OS:
 
 
 ## Configure Kibana
-[embed]Kibana-Configure-Context.pdf[/embed]
+Exist a PDF file at this repo, to help you to configure Kibana [PDF](https://github.com/tonnytg/terraform-elk-ec2-aws/blob/master/Kibana-Configure-Context.pdf)_
 
 
 
