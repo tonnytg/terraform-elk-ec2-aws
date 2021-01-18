@@ -10,7 +10,8 @@
         <ul>
             <li><a href="#packer">Build Packer</a></li>
             <li><a href="#terraform">Build Terraform</a></li>
-      </ul>
+        </ul>
+     </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#contributing">Contributing</a></li>
@@ -31,8 +32,9 @@ _For more examples, please refer to the [Documentation](https://www.packer.io/do
 
 3. Será necessário ter o terraform instalado
 _For more examples, please refer to the [Documentation](https://www.terraform.io/downloads.html)_
+
 <br/>
-<br/>
+
 ## Installation
 
 #### Packer
