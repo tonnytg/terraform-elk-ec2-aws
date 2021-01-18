@@ -17,12 +17,15 @@
     <li><a href="#contributing">Contributing</a></li>
   </ol>
 </details>
-<br/>
+
+
+
 ## About the project
 > This terraformation can help your company to build an ELK very fast on AWS with EC2 
 > This project creates an EC2 demo to simulate a client.
-<br/>
-<br/>
+
+
+
 ## Prerequisites
 1. Será necessário ter o AWS Cli instalado e configurado
 _For more examples, please refer to the [Documentation](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html)_
@@ -33,7 +36,9 @@ _For more examples, please refer to the [Documentation](https://www.packer.io/do
 3. Será necessário ter o terraform instalado
 _For more examples, please refer to the [Documentation](https://www.terraform.io/downloads.html)_
 
-<br/>
+
+
+
 
 ## Installation
 
@@ -51,8 +56,9 @@ _For more examples, please refer to the [Documentation](https://www.terraform.io
     packer build -var-file=vars.json ec2-packer.json
     ```
     Get IAM ID to use on terraform.tfvars
-<br/>
-<br/>
+
+
+
 #### Terraform
 
 1. Edit terraform.tfvars with values for example:
@@ -71,15 +77,35 @@ _For more examples, please refer to the [Documentation](https://www.terraform.io
         ec2_ami_id      = "ami-0144a621f6197f9a2"               # Get AMI ID after run $packer build
         ec2_type        = "t2.micro"                            # No hardware needed
     ```
-<br/>
-<br/>
-<br/>
+
+
+
 - Run ``terraform init`` to initialize the module.
 - You can now run ``terraform plan`` to see how it will work.
 - You can now run ``terraform apply`` to deploy your infrastructure
-<br/>
-<br/>
-<br/>
+
+
+
+## Usage
+
+Get ELK information to access via browser:
+``$aws ec2 describe-instances --filters "Name=tag:Name,Values=dev-elk" --query "Reservations[*].Instances[*].PublicIpAddress"``
+
+
+If you use MAC OS:
+``open http://$( aws ec2 describe-instances --filters "Name=tag:Name,Values=dev-elk" --query "Reservations[*].Instances[*].PublicIpAddress" | grep '"' | tr -s " " | cut -d '"' -f2):5601``
+
+
+## Configure Kibana
+[embed]Kibana-Configure-Context.pdf[/embed]
+
+
+
+Get EC2 Client IP to use at Kibana Filter
+``$aws ec2 describe-instances --filters "Name=tag:Name,Values=dev-ec2-asg" --query "Reservations[*].Instances[*].PrivateIpAddress"``
+
+
+
 <!-- CONTRIBUTING -->
 ## Contributing
 
