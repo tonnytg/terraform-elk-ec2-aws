@@ -23,7 +23,7 @@ module "elk_server" {
   key_pair_name = var.key_pair_name
   vpc_id        = module.vpc.vpc_id
   subnet_ids    = module.vpc.public_subnets
-  ami_id        = var.elk_ami_id
+  ami_id        = data.aws_ami.server_elk.image_id
   instance_type = var.elk_type
 }
 
@@ -35,7 +35,7 @@ module "ec2_client" {
   key_pair_name = var.key_pair_name
   vpc_id        = module.vpc.vpc_id
   subnet_ids    = module.vpc.private_subnets
-  ami_id        = var.ec2_ami_id
+  ami_id        = data.aws_ami.server_ec2.image_id
   instance_type = var.ec2_type
   elk_ip        = module.elk_server.elk_ip
 
