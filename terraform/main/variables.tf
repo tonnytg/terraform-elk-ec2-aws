@@ -1,5 +1,4 @@
 variable "region" {
-  default     = "us-east-1"
   description = "Region in which resources should be created"
 }
 

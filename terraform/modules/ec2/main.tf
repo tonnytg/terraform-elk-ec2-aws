@@ -1,3 +1,4 @@
+# Configuration EC2 before start
 resource "aws_launch_configuration" "ec2_lc" {
   name          = "${var.env}-ec2_lc"
   image_id      = var.ami_id
@@ -14,6 +15,7 @@ EOF
   security_groups = [ aws_security_group.allow_traffic.id ]
 }
 
+# Auto Scaling Group Client with send ELK logs
 resource "aws_autoscaling_group" "ec2_asg" {
   desired_capacity   = var.desired_capacity
   max_size           = var.max_capacity

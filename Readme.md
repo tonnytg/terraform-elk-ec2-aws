@@ -21,19 +21,20 @@
 
 
 ## About the project
-> This terraformation can help your company to build an ELK very fast on AWS with EC2 
-> This project creates an EC2 demo to simulate a client.
+> This terraformation can help your company to build an ELK very fast with EC2 
+> This project creates another EC2 to use demo to simulate a client.
 
 
 
 ## Prerequisites
-1. Será necessário ter o AWS Cli instalado e configurado<br/>
+1. Install and config yout AWS CLI<br/>
 _For more examples, please refer to the [Documentation](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html)_
 
-2. Será necessário ter o Packer instalado<br/>
+2. Install Packer<br/>
 _For more examples, please refer to the [Documentation](https://www.packer.io/downloads)_
 
-3. Será necessário ter o terraform instalado<br/>
+3. Install Terraform<br/>
+ You need get Terraform version 12/13<br/>
 _For more examples, please refer to the [Documentation](https://www.terraform.io/downloads.html)_
 
 

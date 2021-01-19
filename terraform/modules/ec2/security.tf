@@ -3,6 +3,7 @@ resource "aws_security_group" "allow_traffic" {
   description = "Allow inbound traffic"
   vpc_id      = var.vpc_id
 
+  # Inbound
   ingress {
     description = "SSH inbound"
     from_port   = 22
@@ -11,6 +12,7 @@ resource "aws_security_group" "allow_traffic" {
     cidr_blocks = var.allowed_ingress
   }
 
+  # Outbound
   egress {
     from_port   = 0
     to_port     = 0

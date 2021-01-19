@@ -10,7 +10,7 @@ resource "aws_security_group" "allow_traffic" {
     protocol    = "tcp"
     cidr_blocks = var.allowed_ingress
   }
-
+  # inbound
   ingress {
     description = "logstash inbound"
     from_port   = 5044
@@ -18,7 +18,7 @@ resource "aws_security_group" "allow_traffic" {
     protocol    = "tcp"
     cidr_blocks = var.allowed_ingress
   }
-
+  # outbound
   egress {
     from_port   = 0
     to_port     = 0

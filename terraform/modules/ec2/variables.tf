@@ -1,7 +1,13 @@
+# Instance Variables
 variable "env" {
   type        = string
   default     = "dev"
   description = "Environment name"
+}
+
+variable "ami_id" {
+  type        = string
+  description = "AMI ID for EC2 instance"
 }
 
 # Auto Scaling Variables
