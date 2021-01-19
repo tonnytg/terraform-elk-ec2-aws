@@ -44,6 +44,9 @@ _For more examples, please refer to the [Documentation](https://www.terraform.io
 ## Installation
 
 #### Packer
+
+> Go to packer folder and build your image
+
 1. To build EKL image using packer run below command
     ```
     cd packer
@@ -62,6 +65,12 @@ _For more examples, please refer to the [Documentation](https://www.terraform.io
 
 #### Terraform
 
+> Go to terraform folder and after go to main folder.
+```
+  cd terraform/main
+  vim terraform.tfvars
+```
+
 1. Edit terraform.tfvars with values for example:
     ```
         env             = "dev"
@@ -77,7 +86,7 @@ _For more examples, please refer to the [Documentation](https://www.terraform.io
         ec2_type        = "t2.micro"                            # No hardware needed
     ```
 
-
+> Inside main folder, execute:
 
 - Run ``terraform init`` to initialize the module.
 - You can now run ``terraform plan`` to see how it will work.
