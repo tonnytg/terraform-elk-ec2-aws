@@ -114,8 +114,9 @@ _For more examples, please refer to the [Documentation](https://www.terraform.io
  $aws ec2 describe-instances --filters "Name=tag:Name,Values=dev-ec2-asg" \ 
  --query "Reservations[*].Instances[*].PrivateIpAddress"
 ```
+OR
 
-
+![How access Kibana](https://github.com/tonnytg/terraform-elk-ec2-aws/blob/master/after-apply-elk.png)
 
 ## Configure Kibana
 Exist a PDF file at this repo, to help you to configure Kibana<br/>
