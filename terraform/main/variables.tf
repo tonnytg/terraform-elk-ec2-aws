@@ -14,16 +14,6 @@ variable "key_pair_name" {
   description = "Name of existing keypair"
 }
 
-variable "elk_ami_id" {
-  type        = string
-  description = "AMI ID for ELK"
-}
-
-variable "ec2_ami_id" {
-  type        = string
-  description = "AMI ID for EC2"
-}
-
 variable "ec2_type" {
   type        = string
   description = "EC2 type for client"
@@ -53,5 +43,3 @@ variable "private_subnets" {
   type        = list
   description = "Private Subnet address"
 }
-
-
