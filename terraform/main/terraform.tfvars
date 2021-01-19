@@ -6,8 +6,6 @@ azs             = ["us-east-1a", "us-east-1b"]
 private_subnets = ["10.0.1.0/24", "10.0.2.0/24"]
 public_subnets  = ["10.0.101.0/24", "10.0.102.0/24"]
 
-elk_ami_id      = "ami-08707dbbaf59360c7"               # Get AMI ID after run $packer build
-elk_type        = "t2.medium"                           # 4G or greater than
+elk_type        = "t2.medium"                           # Choose family with 4G or greater than to ELK Server
 
-ec2_ami_id      = "ami-0144a621f6197f9a2"               # Get AMI ID after run $packer build
-ec2_type        = "t2.micro"                            # No hardware needed
+ec2_type        = "t2.micro"                            # No hardware needed to Low Server Ubuntu EC2
