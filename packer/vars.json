@@ -1,5 +1,4 @@
 {
     "vpc_region": "us-east-1",
-    "elk_instance_type": "t2.medium",
-    "client_instance_type": "t2.micro"
+    "instance_type": "t2.medium"
 }

@@ -1,7 +1,7 @@
 {
     "variables": {
     "vpc_region": "${vpc_region}",
-    "instance_type": "${elk_instance_type}"
+    "instance_type": "${instance_type}"
   },
     "builders": [
       {
