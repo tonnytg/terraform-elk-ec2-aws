@@ -52,14 +52,14 @@ _For more examples, please refer to the [Documentation](https://www.terraform.io
     cd packer
     packer build -var-file=vars.json elk-packer.json
     ```
-    Get IAM ID to use on terraform.tfvars
+    IAM ID will get with the data source.
 
 2. To build EC2 image using packer run below command
     ```
     cd packer
     packer build -var-file=vars.json ec2-packer.json
     ```
-    Get IAM ID to use on terraform.tfvars
+    IAM ID will get with the data source.
 
 
 
