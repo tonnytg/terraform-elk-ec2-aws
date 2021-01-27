@@ -10,6 +10,7 @@
         <ul>
             <li><a href="#packer">Build Packer</a></li>
             <li><a href="#terraform">Build Terraform</a></li>
+            <li><a href="#architecture">Architecture</a></li>
         </ul>
      </ul>
     </li>
@@ -92,6 +93,11 @@ _For more examples, please refer to the [Documentation](https://www.terraform.io
 - You can now run ``terraform plan`` to see how it will work.
 - You can now run ``terraform apply`` to deploy your infrastructure
 
+
+## Architecture
+
+This is a simple demo of what we build
+![Architecture](https://github.com/tonnytg/terraform-elk-ec2-aws/blob/master/elk-ec2-demo.png)
 
 
 ## Usage
