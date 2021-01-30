@@ -1,6 +1,6 @@
 <!-- TABLE OF CONTENTS -->
 <details open="open">
-  <summary>Deploy ELK with Packer and Terraform</summary>
+  <summary>Deploy ELK Stack with Packer and Terraform</summary>
   <ol>
     <li>
       <a href="#getting-started">Getting Started</a>
