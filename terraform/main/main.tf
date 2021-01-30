@@ -22,6 +22,7 @@ data "aws_ami" "server_ec2" {
 }
 
 module "vpc" {
+  // my network module
   source = "git@github.com:tonnytg/terraform-mod-network"
 
   cidr            = var.cidr
