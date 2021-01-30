@@ -1,7 +1,7 @@
 # Data Source to get AMI ID
 data "aws_ami" "server_elk" {
-  most_recent      = true
-  owners           = ["self"]
+  most_recent = true
+  owners      = ["self"]
 
   filter {
     name   = "name"
@@ -11,8 +11,8 @@ data "aws_ami" "server_elk" {
 }
 
 data "aws_ami" "server_ec2" {
-  most_recent      = true
-  owners           = ["self"]
+  most_recent = true
+  owners      = ["self"]
 
   filter {
     name   = "name"
@@ -21,23 +21,12 @@ data "aws_ami" "server_ec2" {
 
 }
 
-# Modules
 module "vpc" {
-  source = "terraform-aws-modules/vpc/aws"
+  source = "git@github.com:tonnytg/terraform-mod-network"
 
-  name = "my-vpc"
-  cidr = var.cidr
-
-  azs             = var.azs
-  private_subnets = var.private_subnets
-  public_subnets  = var.public_subnets
-
-  enable_nat_gateway = true
-  enable_vpn_gateway = true
-
-  tags = {
-    Terraform = "true"
-  }
+  cidr            = var.cidr
+  cidr_blocks_pub = var.public_subnets
+  cidr_blocks_pri = var.private_subnets
 }
 
 module "elk_server" {
