@@ -24,7 +24,7 @@ variable "elk_type" {
 }
 
 variable "azs" {
-  type        = list
+  type        = list(any)
   description = "Available zones"
 }
 
@@ -34,11 +34,11 @@ variable "cidr" {
 }
 
 variable "public_subnets" {
-  type        = list
+  type        = list(any)
   description = "Public Subnet address"
 }
 
 variable "private_subnets" {
-  type        = list
+  type        = list(any)
   description = "Private Subnet address"
 }
